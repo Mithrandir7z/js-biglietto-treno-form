@@ -23,5 +23,36 @@ generaInput.addEventListener("click", function(){
 
     //Prendere in input il valore di eta-utente e settare degli if per verificare l'età, 
     //dopo di che calcolare lo sconto.
+    var etaUtente = document.getElementById("eta-utente").value;
+
+    //Calcolo dei kilometriTotali * cost al Km
+    var costoAlKm = 0.21;
+    var costoTotale = chilometriUtente * costoAlKm;
+    console.log(costoTotale); 
+
+    //calcolo dello sconto in base al valore scelto nel tag select/option
+    var etaMaggiore = 0;
+    var etaMinore = 0;
+    var etaOver = 0;
+
+    if (etaUtente == "minorenne") {
+        etaMinore = 1;
+        console.log(etaMinore);
+    } else if (etaUtente == "over") {
+        etaOver = 1;
+        console.log(etaOver);
+    }
+
+    //calcolo sconto
+    if (etaOver == 1) {
+        costoTotale = costoTotale - (costoTotale * 40 / 100);
+        console.log(costoTotale);
+    } else if (etaMinore == 1) {
+        costoTotale = costoTotale - (costoTotale * 20 / 100);
+    }
+
+
+    //stampa
     
+
 });
