@@ -71,8 +71,8 @@ generaInput.addEventListener("click", function(){
 
     //stampa: Prendere un div hidden e metterlo in display: block;
     // variabile.className(ti dice sto cambiando il nome della classe dell'elemento) = variabile.classList(ti dice sto mantenendo le classi scritte precedentemente) = " red"(ti dice sto aggiungendo la classe " red" effettivamente);
-    var contenuto = document.getElementById("hidden").innerHTML;
-    contenuto.className = contenuto.classList = " visible";
+    var contenuto = document.getElementById("hidden");
+    contenuto.className = contenuto.classList + " visible";
     // Cosi si concatenano le classi e non si sovrascrivono.
 
 });

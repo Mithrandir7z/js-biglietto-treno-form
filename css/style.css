@@ -43,11 +43,7 @@
 
 
 /*Biglietto div*/
-.biglietto-wrapper {
-    margin: 50px;
-    padding: 50px;
-    background-color: lightgray;
-}
+
 
 .left, .box {
     padding: 15px;
@@ -78,11 +74,15 @@
     padding-bottom: 50px;
 }
 
-#hidden {
+
+.biglietto-wrapper {
+    margin: 50px;
+    padding: 50px;
+    background-color: lightgray;
     display: none;
 }
-
 
 .visible {
     display: block;
 }
+
