@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Biglietto treno</title>
+</head>
+<body>
+    
+    <div class="input-wrapper">
+        <!--Inserire input di: NomeCognome // KmDaPercorrere // Fascia d'età -->
+        <div class="input-form">
+            <label for="input-form">
+                <input type="text" id="nome-cognome-input" placeholder="Nome Cognome">
+            </label>
+
+            <label for="km-da-percorrere-input">
+                <input type="text" id="km-da-percorrere-input" placeholder="Km">
+            </label>
+
+            <label for="cars">
+                <select id="cars">
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over">Over 65</option>
+                </select>
+            </label>
+        </div>
+
+        <!--Inserire input button di: Genera // Annulla -->
+        <div class="input-button">
+            <label for="genera">
+                <button id="button-genera">Genera</button>
+            </label>
+
+            <label for="cancella">
+                <button id="button-cancella">Cancella</button>
+            </label>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
