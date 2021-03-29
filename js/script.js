@@ -31,7 +31,6 @@ generaInput.addEventListener("click", function(){
     console.log(costoTotale); 
 
     //calcolo dello sconto in base al valore scelto nel tag select/option
-    var etaMaggiore = 0;
     var etaMinore = 0;
     var etaOver = 0;
 
@@ -46,13 +45,34 @@ generaInput.addEventListener("click", function(){
     //calcolo sconto
     if (etaOver == 1) {
         costoTotale = costoTotale - (costoTotale * 40 / 100);
+        document.getElementById("offerta").innerHTML = "Sconto <br> over 65";
         console.log(costoTotale);
     } else if (etaMinore == 1) {
         costoTotale = costoTotale - (costoTotale * 20 / 100);
+        document.getElementById("offerta").innerHTML = "Sconto <br> over 65";
+    } else {
+        document.getElementById("offerta").innerHTML = "Nessuna <br> offerta";
     }
 
+    //stampa il costo del biglietto
+    document.getElementById("costo-biglietto").innerHTML = costoTotale;
 
-    //stampa
-    
+    //genera e stampa un random numero carrozza da 1 a 10
+    var carrozza = Math.floor((Math.random() * 10) + 1);
+    document.getElementById("carrozza").innerHTML = carrozza;
+
+    //Genera e stampa un random numero Codice CP da 90 000 a 99 000
+    var codiceCp = Math.floor((Math.random() * 99000) + 90000);
+    document.getElementById("codice-cp").innerHTML = codiceCp;
+
+    //stampa il nome passeggero
+    document.getElementById("nome-passeggero").innerHTML = NomeCognome;
+
+
+    //stampa: Prendere un div hidden e metterlo in display: block;
+    // variabile.className(ti dice sto cambiando il nome della classe dell'elemento) = variabile.classList(ti dice sto mantenendo le classi scritte precedentemente) = " red"(ti dice sto aggiungendo la classe " red" effettivamente);
+    var contenuto = document.getElementById("hidden").innerHTML;
+    contenuto.className = contenuto.classList = " visible";
+    // Cosi si concatenano le classi e non si sovrascrivono.
 
 });

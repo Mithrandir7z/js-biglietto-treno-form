@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/*Input div*/
 .input-wrapper {
     margin: 50px;
     padding: 50px;
@@ -29,4 +38,51 @@
 
 .input-button button {
     padding: 8px;
+}
+
+
+
+/*Biglietto div*/
+.biglietto-wrapper {
+    margin: 50px;
+    padding: 50px;
+    background-color: lightgray;
+}
+
+.left, .box {
+    padding: 15px;
+}
+
+.left {
+    background-color: white;
+}
+
+.right {
+    margin-left: 335px;
+    background-color: white;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.top-text {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+#hidden {
+    display: none;
+}
+
+
+.visible {
+    display: block;
 }
